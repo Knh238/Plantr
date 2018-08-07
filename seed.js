@@ -16,8 +16,6 @@ db.sync({force: true}).then(() => {
 //   vegetableId: carrot.id,
 //   plotId: plot1.id
 // })
-
-
   })
   .catch(err => {
     console.log("Something went wrong.");
