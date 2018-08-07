@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 const morgan = require('morgan');
 const db = new Sequelize('postgres://localhost:5432/plantr');
 
-//modules.export = db;
+//modules.export = db; 
 
 
 
@@ -30,4 +30,4 @@ Plot.belongsToMany(Vegetable, {through: 'vegetable_plot'})
 Gardener.belongsTo(Vegetable, {as: 'favorite_vegetable'});
 
 
-module.exports = db;
+module.exports = {db, Plot, Vegetable, Gardener};
